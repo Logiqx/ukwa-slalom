@@ -80,7 +80,7 @@ Check that the HTML files look correct in your favorite browser.
 
 #### Combining Fleet Results
 
-Combine the fleets into a single HTML file - e.g. slalom1-hayling.html
+Combine the fleets into a single HTML file using your favorite text editor - e.g. slalom1-hayling.html
 
 Tips:
 
@@ -94,19 +94,19 @@ Check that the combined HTML file looks correct in your favorite browser.
 
 #### Uploading to the Server
 
-Results are uploaded to the UKWA server via [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol). [FileZilla](https://filezilla-project.org/) is a good FTP client.
+Results are uploaded to the UKWA server via [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol) - [FileZilla](https://filezilla-project.org/) is a good FTP client.
 
-Place the results in www_results/year
+Place the results in www_results/year - e.g. www_results/2017
 
 #### Publishing on the Website
 
 Log in to the UK Windsufing [Admin](https://ukwindsurfing.com/admin/) portal.
 
 * Click on "Links" then "Add Link"
-* Results listing = "Results", Homepage title = "Slalom 1 - Results"
-* Url = "http://results.ukwindsurfing.com/2017/slalom1-weymouth.html"
-* Event = Selected from dropdown... it will be very near to the bottom
-* Content type = "results", Discipline = "Slalom"
+* Set "Results listing" = "Results", "Homepage title" = "Slalom 1 - Results"
+* Set "Url" = "http://results.ukwindsurfing.com/2017/slalom1-weymouth.html"
+* "Event" needs to be selected from a dropdown... search from the bottom upwards
+* Set "Content type" = "results", "Discipline" = "Slalom"
 
 
 ### Preparing Attendance Points
@@ -119,7 +119,7 @@ If the UKWA slalom event did not involve any actual racing then the series atten
     * "RaceNo" should be set to the event number; typically 1 to 7 
     * "Code" should be set to "ATT" for all competitors in attendance
 
-The end result should be a [CVS](https://en.wikipedia.org/wiki/Comma-separated_values) file with 4 columns; "Fleet", "HelmName", "RaceNo" and "Code".
+The end result should be a [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) file with 4 columns; "Fleet", "HelmName", "RaceNo" and "Code".
 
 The CSV filename should correspond to the original results; e.g. slalom1-weymouth-am.csv
 
@@ -150,9 +150,9 @@ The process is as follows:
 
 ### Creating Rankings
 
-Each fleet needs to have a Sailwave series created for it at the start of the season.
+Each fleet needs to have a Sailwave series created at the start of the season.
 
-One easy approach is to use an existing series then deleting all of the competitors and races.
+One easy approach is to use an existing series, deleting all of the existing competitors and races.
 
 Setup -> Series properties...
 
@@ -163,8 +163,8 @@ Setup -> Series properties...
 
 Setup -> Scoring System... -> Scoring codes
 
-* Add ATT = Fixed points of 0, non-discardable
-* Add ABS = Fixed points of 2, non-discardable
+* Add ATT = Fixed points of 0 - non-discardable
+* Add ABS = Fixed points of 2 - non-discardable
 * Add AVG = Set points by hand
 
 ### Updating Rankings
@@ -180,21 +180,21 @@ Attendance codes are imported as follows:
 
 * File -> Import results from CSV file...
 * Select the appropriate CSV file and press "Next"
-* Map the fields where necessary
-* Ensure the race is non-discardable
-* Change the code for all absent attendees to ABS
+* Map the fields where necessary and complete the CSV import
+* Once the CSV has been imported, ensure the race is non-discardable
+* Once the CSV has been imported, change the code for all absent attendees to ABS
 
 Once the results have been imported, rename the race to the name of the venue.
 
 #### Updating Attendance Points
 
-After adding the new race / event the series may contain some new competitors.
+After merging / importing the latest results the series may contain some new competitors.
 
-Ensure that they are marked as ABS for any previous events which were scored by attendance.
+Ensure the new competitors are marked as ABS for any previous events which were scored on attendance.
 
 #### Updating Average Points
 
-After adding the new race / event you need to re-calculate the AVG points where applicable. 
+After adding the new race / event you may need to re-calculate the AVG points for some competitors. 
 
 #### Generating Fleet Rankings
 
@@ -207,24 +207,24 @@ The HTML filenames should conform to project standards; e.g. slalom-rankings-am.
 
 #### Performing Sanity Checks
 
-The following checks need to be done after updating the rankings:
+The following checks need to be performed after you have updated the rankings:
 
 * Look for people who are duplicated due to their name being mis-spelt
     * If duplicates are spotted then transfer the results to the correct competitor and delete the duplicate
-* Check the discards are correct
-    * If the discards are incorrect then set them via Setup -> Scoring system... -> Series Scoring -> Discard profile
+* Check the series discards are correct
+    * If the series discards are incorrect then specify them in Setup -> Scoring system... -> Series Scoring -> Discard profile
 * Check that all of the events have a proper name and not R1, R2, etc.
     * If an event needs naming then use Edit -> Edit race...
 * Check that ATT / ABS codes are not being discarded
-    * If ATT / ABS codes are being discarded then use Edit -> Edit race...
+    * If ATT / ABS codes are being discarded then use Edit -> Edit race... to make it non-discardable
 * Check that AVG points are calculated correctly
-    * If AVG points are incorrect then fix them by double-clicking the bad cell
+    * If AVG points are incorrect then fix them by double-clicking the incorrect cell
 
 ### Publishing Rankings
 
 #### Combining Fleet Rankings
 
-Combine the fleets into a single HTML file - e.g. slalom-rankings.html
+Combine the fleets into a single HTML file using your favorite text editor - e.g. slalom-rankings.html
 
 Tips:
 
@@ -238,9 +238,9 @@ Check that the combined HTML file looks correct in your favorite browser.
 
 #### Uploading to the Server
 
-Results are uploaded to the UKWA server via [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol). [FileZilla](https://filezilla-project.org/) is a good FTP client.
+Results are uploaded to the UKWA server via [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol) - [FileZilla](https://filezilla-project.org/) is a good FTP client.
 
-Place the results in www_results/year
+Place the results in www_results/year - e.g. www_results/2017
 
 #### Publishing on the Website
 
