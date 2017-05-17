@@ -80,7 +80,7 @@ Check that the HTML files look correct in your favorite browser.
 
 #### Combining Fleet Results
 
-Combine the fleets into a single HTML file.
+Combine the fleets into a single HTML file - e.g. slalom1-hayling.html
 
 Tips:
 
@@ -94,9 +94,7 @@ Check that the combined HTML file looks correct in your favorite browser.
 
 #### Uploading to the Server
 
-Results are uploaded to the UKWA server via [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol).
-
-[FileZilla](https://filezilla-project.org/) is a good FTP client.
+Results are uploaded to the UKWA server via [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol). [FileZilla](https://filezilla-project.org/) is a good FTP client.
 
 Place the results in www_results/year
 
@@ -152,52 +150,101 @@ The process is as follows:
 
 ### Creating Rankings
 
-TODO
+Each fleet needs to have a Sailwave series created for it at the start of the season.
 
+One easy approach is to use an existing series then deleting all of the competitors and races.
+
+Setup -> Series properties...
+
+* Event name = UKWA Slalom 2017
+* Event website = www.ukwindsurfing.com
+* Venue name = Series
+* Venue website = github.com/Logiqx/ukwa-slalom
+
+Setup -> Scoring System... -> Scoring codes
+
+* Add ATT = Fixed points of 0, non-discardable
+* Add ABS = Fixed points of 2, non-discardable
+* Add AVG = Set points by hand
 
 ### Updating Rankings
 
 #### Merging Event Results
 
-TODO - include naming of the event
+Actual results are imported as follows:
+
+* File -> Merge in another Sailwave series...
+* Select the appropriate Sailwave file
+
+Attendance codes are imported as follows:
+
+* File -> Import results from CSV file...
+* Select the appropriate CSV file and press "Next"
+* Map the fields where necessary
+* Ensure the race is non-discardable
+* Change the code for all absent attendees to ABS
+
+Once the results have been imported, rename the race to the name of the venue.
 
 #### Updating Attendance Points
 
-TODO
+After adding the new race / event the series may contain some new competitors.
+
+Ensure that they are marked as ABS for any previous events which were scored by attendance.
 
 #### Updating Average Points
 
-TODO
+After adding the new race / event you need to re-calculate the AVG points where applicable. 
 
 #### Generating Fleet Rankings
 
-TODO
+* Select "Publish" -> "Results..."
+* Select the appropriate fleet and click "Provisional" before pressing "Next"
+* Select the "Default plus" style and destination of "A file on my computer/network"
+* Use the "Browse..." button to specify the HTML filename
 
-* Results are marked as "final" when published prior to upload
-* The results are published to a HTML file using the "Default plus" style
-* The HTML filenames should conform to project standards; e.g. slalom-rankings-am.html
+The HTML filenames should conform to project standards; e.g. slalom-rankings-am.html
 
 #### Performing Sanity Checks
 
-TODO
+The following checks need to be done after updating the rankings:
 
-
+* Look for people who are duplicated due to their name being mis-spelt
+    * If duplicates are spotted then transfer the results to the correct competitor and delete the duplicate
+* Check the discards are correct
+    * If the discards are incorrect then set them via Setup -> Scoring system... -> Series Scoring -> Discard profile
+* Check that all of the events have a proper name and not R1, R2, etc.
+    * If an event needs naming then use Edit -> Edit race...
+* Check that ATT / ABS codes are not being discarded
+    * If ATT / ABS codes are being discarded then use Edit -> Edit race...
+* Check that AVG points are calculated correctly
+    * If AVG points are incorrect then fix them by double-clicking the bad cell
 
 ### Publishing Rankings
 
 #### Combining Fleet Rankings
 
-TODO
+Combine the fleets into a single HTML file - e.g. slalom-rankings.html
+
+Tips:
+
+* Each fleet has a "summarytitle" which names the fleet
+* Each fleet has a "summarycaption" which shows the number of races sailed, discards, counting, etc.
+* Each fleet has a "summarytable" which is the actual results
 
 #### Performing Sanity Checks
 
-TODO
+Check that the combined HTML file looks correct in your favorite browser.
 
 #### Uploading to the Server
 
-TODO - Results are uploaded to the UKWA server via [SFTP](https://en.wikipedia.org/wiki/Secure_file_transfer_program).
+Results are uploaded to the UKWA server via [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol). [FileZilla](https://filezilla-project.org/) is a good FTP client.
+
+Place the results in www_results/year
 
 #### Publishing on the Website
 
-TODO - N/A
+No publishing is required for the rankings as with individual events results.
+
+The UKWA website will automatically show the rankings if the HTML file is named correctly.
 
