@@ -20,7 +20,7 @@ Competitors who miss a UKWA event to attend an international event (e.g. [IFCA](
 
 Average points are calculated using the arithmetic mean of the events when racing actually took place. All events which were scored using ATT 0.0 or ABS 2.0 are excluded from this calculation.
 
-e.g. During a season where a competitor scored 3.0, (DNC 51.0), 4.0, ATT 0.0, 2.0 then average points for the 6th event would be 15.0 points, calculated using (3.0 + 51.0 + 4.0 + 2.0) / 4 = 15.0.
+e.g. After 6 events where a competitor scored 3.0, (DNC 51.0), AVG N.N, 4.0, ATT 0.0, 2.0 the calculation for the AVG result would give 15.0 points. The result for the AVG event would be calculated as (3.0 + 51.0 + 4.0 + 2.0) / 4 = 15.0. The competitor failed to attend the second event (hence DNC 51.0) and requested average points for the third event. The fifth event did not have any official racing due to lack of wind.
 
 It should be noted that DNC results (i.e. non-attendance at events when racing took place) count heavily towards the average points. Attendance points are entered using a custom code "AVG N.N" and must be manually re-calculated as the season progresses.
 
