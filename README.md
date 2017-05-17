@@ -6,7 +6,7 @@ This project is used a central repository for the [UKWA](http://ukwindsurfing.co
 
 This document aims to describe all of the steps required to generate and publish the UKWA slalom the slalom results but it is by no means an actual tutorial. Familiarity with the scoring software is essential and some basic technical expertise is also required as the process involves hand-editing of [HTML](https://en.wikipedia.org/wiki/HTML) files and uploading them to the UKWA [Results](http://ukwindsurfing.com/results) page.
 
-The scoring software is [SailWave](http://TODO) with the addition of a few custom scoring codes for "attendance points" and "average points". Season discards cannot be pre-determined due to our use of attendance points and average points so they must be determined as the season progresses.
+The scoring software is [SailWave](http://www.sailwave.com/) with the addition of a few custom scoring codes for "attendance points" and "average points". Season discards cannot be pre-determined due to our use of attendance points and average points so they must be determined as the season progresses.
 
 ### Attendance Points
 
@@ -60,40 +60,55 @@ The process is as follows:
 
 #### Renaming Sailwave Files
 
-TODO
-
-* The Sailwave filenames should conform to project standards; e.g. slalom1-weymouth-am.blw
+The Sailwave filenames should conform to project standards; e.g. slalom1-weymouth-am.blw
 
 #### Generating Fleet Results
 
-TODO
+* Select "Publish" -> "Results..."
+* Select the appropriate fleet and click "Final" before pressing "Next"
+* Select the "Default plus" style and destination of "A file on my computer/network"
+* Use the "Browse..." button to specify the HTML filename
 
-* Results are marked as "final" when published to the local HTML file
-* The results are published using the "Default plus" style / template
-* The HTML filenames should conform to project standards; e.g. slalom1-weymouth-am.html
+The HTML filenames should conform to project standards; e.g. slalom1-weymouth-am.html
 
 #### Performing Sanity Checks
 
-TODO
+Check that the HTML files look correct in your favorite browser.
 
 
 ### Publishing Results
 
 #### Combining Fleet Results
 
-TODO
+Combine the fleets into a single HTML file.
+
+Tips:
+
+* Each fleet has a "summarytitle" which names the fleet
+* Each fleet has a "summarycaption" which shows the number of races sailed, discards, counting, etc.
+* Each fleet has a "summarytable" which is the actual results
 
 #### Performing Sanity Checks
 
-TODO
+Check that the combined HTML file looks correct in your favorite browser.
 
 #### Uploading to the Server
 
-TODO - Results are uploaded to the UKWA server via [SFTP](https://en.wikipedia.org/wiki/Secure_file_transfer_program).
+Results are uploaded to the UKWA server via [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol).
+
+[FileZilla](https://filezilla-project.org/) is a good FTP client.
+
+Place the results in www_results/year
 
 #### Publishing on the Website
 
-TODO - Adding to results page
+Log in to the UK Windsufing [Admin](https://ukwindsurfing.com/admin/) portal.
+
+* Click on "Links" then "Add Link"
+* Results listing = "Results", Homepage title = "Slalom 1 - Results"
+* Url = "http://results.ukwindsurfing.com/2017/slalom1-weymouth.html"
+* Event = Selected from dropdown... it will be very near to the bottom
+* Content type = "results", Discipline = "Slalom"
 
 
 ### Preparing Attendance Points
