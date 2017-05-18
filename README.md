@@ -2,21 +2,21 @@
 
 ## Introduction
 
-This project is used a central repository for the [UKWA](http://ukwindsurfing.com) slalom results. The folder structure should be pretty obvious as it is broken down into years and events.
+This project has been created as a shared repository for [UKWA](http://ukwindsurfing.com) slalom results. The folder structure should be self-explanatory as it is simply broken down into years and events.
 
-This document aims to describe all of the steps required to generate and publish the UKWA slalom the slalom results but it is by no means an actual tutorial. Familiarity with the scoring software is essential and some basic technical expertise is also required as the process involves hand-editing of [HTML](https://en.wikipedia.org/wiki/HTML) files and uploading them to the UKWA [Results](http://ukwindsurfing.com/results) page.
+This document aims to describe all of the steps required to generate and publish the UKWA slalom results but it is by no means an actual tutorial. Familiarity with the scoring software is essential and some basic technical expertise is also required as the process involves hand-editing of [HTML](https://en.wikipedia.org/wiki/HTML) files and uploading them to the UKWA [Results](http://ukwindsurfing.com/results) page.
 
-The scoring software is [SailWave](http://www.sailwave.com/) with the addition of a few custom scoring codes for "attendance points" and "average points". Season discards cannot be pre-determined due to our use of attendance points and average points so they must be determined as the season progresses.
+The UKWA use [SailWave](http://www.sailwave.com/) as their scoring software with the addition of some custom scoring codes for "attendance points" and "average points". Season discards cannot be pre-determined due to our use of attendance points and average points so they must be determined as the season progresses.
 
 ### Attendance Points
 
-After a UKWA slalom event where there is no official racing (e.g. lack of wind) the people in attendance get a score of 0.0 and the people who are absent get a score of 2.0. These points are non-discardable and will therefore count towards the overall rankings.
+After a UKWA slalom event where there is no official racing (e.g. lack of wind) the people in attendance get a score of 0.0 and the people who are absent get a score of 2.0. These points cannot be discarded and therefore count towards the overall rankings.
 
 This addition to the standard [RRS](https://en.wikipedia.org/wiki/Racing_Rules_of_Sailing) is administrated through two custom scoring codes; "ATT 0.0" and "ABS 2.0".
 
 ### Average Points
 
-Competitors who miss a UKWA event to attend an international event (e.g. [IFCA](http://ifca.internationalwindsurfing.com) or [PWA](https://www.pwaworldtour.com/index.php?id=920)) can request average points for one event during a season. The request / notification must be submitted to the UKWA at least a week prior to the UKWA event.
+Competitors who miss a UKWA event to attend an international event (e.g. [IFCA](http://ifca.internationalwindsurfing.com) or [PWA](https://www.pwaworldtour.com/index.php?id=920)) can request average points for one event during the season. The request / notification must be submitted to the UKWA at least a week prior to the UKWA event.
 
 Average points are calculated using the arithmetic mean of the events when racing actually took place. All events which were scored using ATT 0.0 or ABS 2.0 are excluded from this calculation.
 
@@ -32,7 +32,7 @@ Season discards must be determined as the season progresses and are calculated a
 * One discard when there have been 4 or 5 events with official racing
 * Two discards when there have been 6 or 7 events with official racing
 
-It should be noted that attendance points (ATT 0.0) and absence points (ABS 2.0) are non-discardable.
+It should be noted that attendance points (ATT 0.0) and absence points (ABS 2.0) cannot be discarded.
 
 
 ## Events
@@ -44,14 +44,15 @@ Event results are uploaded to the UKWA [Results](http://ukwindsurfing.com/result
 The process is as follows:
 
 * Generating Results
-    * Renaming Sailwave files to match project standards and storing in the appropriate folder
+    * Renaming Sailwave files to match the project standards
+    * Storing the Sailwave files in the appropriate folder
     * Generating results for each fleet
     * Performing sanity checks for each fleet
 * Publishing Results
     * Combining the fleets into a single file
     * Performing sanity checks on the combined results
-    * Uploading combined results to the UKWA server
-    * Publishing combined results on the UKWA website
+    * Uploading the combined results to the UKWA server
+    * Publishing the combined results on the UKWA website
 * Preparing attendance points
     * This step is only required if the event did not involve any official racing
 
@@ -60,7 +61,7 @@ The process is as follows:
 
 #### Renaming Sailwave Files
 
-The Sailwave filenames should conform to project standards; e.g. slalom1-weymouth-am.blw
+The Sailwave filenames should conform to the project standards; e.g. slalom1-weymouth-am.blw
 
 #### Generating Fleet Results
 
@@ -69,44 +70,49 @@ The Sailwave filenames should conform to project standards; e.g. slalom1-weymout
 * Select the "Default plus" style and destination of "A file on my computer/network"
 * Use the "Browse..." button to specify the HTML filename
 
-The HTML filenames should conform to project standards; e.g. slalom1-weymouth-am.html
+The HTML filenames should conform to the project standards; e.g. slalom1-weymouth-am.html
 
 #### Performing Sanity Checks
 
-Check that the HTML files look correct in your favorite browser.
+Check that the HTML files look correct in your favourite browser.
 
 
 ### Publishing Results
 
 #### Combining Fleet Results
 
-Combine the fleets into a single HTML file using your favorite text editor - e.g. slalom1-hayling.html
+Combine the fleet results into a single HTML file using your favourite text editor.
+
+The filename should conform to the project standards - e.g. slalom1-hayling.html
 
 Tips:
 
 * Each fleet has a "summarytitle" which names the fleet
-* Each fleet has a "summarycaption" which shows the number of races sailed, discards, counting, etc.
+* Each fleet has a "summarycaption" which shows the number of races sailed, discards, etc.
 * Each fleet has a "summarytable" which is the actual results
 
 #### Performing Sanity Checks
 
-Check that the combined HTML file looks correct in your favorite browser.
+Check that the combined HTML file looks correct in your favourite browser.
 
 #### Uploading to the Server
 
 Results are uploaded to the UKWA server via [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol) - [FileZilla](https://filezilla-project.org/) is a good FTP client.
 
-Place the results in www_results/year - e.g. www_results/2017
+Place the results in the appropriate folder - e.g. www\_results/2017
 
 #### Publishing on the Website
 
-Log in to the UK Windsufing [Admin](https://ukwindsurfing.com/admin/) portal.
+Log in to the UK Windsurfing [Admin](https://ukwindsurfing.com/admin/) portal.
 
-* Click on "Links" then "Add Link"
-* Set "Results listing" = "Results", "Homepage title" = "Slalom 1 - Results"
-* Set "Url" = "http://results.ukwindsurfing.com/2017/slalom1-weymouth.html"
-* "Event" needs to be selected from a dropdown... search from the bottom upwards
-* Set "Content type" = "results", "Discipline" = "Slalom"
+Click on "Links" then "Add Link". Complete the form as per the example:
+
+* Results listing = Results
+* Homepage title = Slalom 1 - Results
+* Url = http://results.ukwindsurfing.com/2017/slalom1-weymouth.html
+* Event needs to be selected from a dropdown (search near the bottom)
+* Content type = results
+* Discipline = Slalom
 
 
 ### Preparing Attendance Points
@@ -116,7 +122,7 @@ If the UKWA slalom event did not involve any actual racing then the series atten
 * Export the Sailwave results to the clipboard, including only the "Fleet" and "HelmName" columns
 * Paste the clipboard results into a text editor and convert the tab characters to commas
 * Append two additional columns to all records in the file; "RaceNo" and "Code"
-    * "RaceNo" should be set to the event number; typically 1 to 7 
+    * "RaceNo" should be set to the event number; i.e. 1 to 7 
     * "Code" should be set to "ATT" for all competitors in attendance
 
 The end result should be a [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) file with 4 columns; "Fleet", "HelmName", "RaceNo" and "Code".
@@ -136,8 +142,8 @@ The process is as follows:
     * This step is only required at the start of the season
     * There is one Sailwave file for each fleet
 * Updating Rankings
-    * Merging event results into the series rankings, whether they be actual results or attendance points
-    * Updating the historical non-attendance for new competitors; i.e. ABS 2.0
+    * Merging event results into the series rankings; actual results or attendance points
+    * Updating the historical non-attendance of new competitors; i.e. ABS 2.0
     * Updating the average points of existing competitors; i.e. AVG N.N
     * Generating rankings for each fleet
     * Performing sanity checks for each fleet
@@ -181,70 +187,79 @@ Attendance codes are imported as follows:
 * File -> Import results from CSV file...
 * Select the appropriate CSV file and press "Next"
 * Map the fields where necessary and complete the CSV import
-* Once the CSV has been imported, ensure the race is non-discardable
-* Once the CSV has been imported, change the code for all absent attendees to ABS
+* Once the CSV has been imported, ensure the race cannot be discarded
+* Ensure that you change the code for all absent competitors to ABS
 
-Once the results have been imported, rename the race to the name of the venue.
+Once the results have been imported, rename the race to the name of the venue; e.g. Weymouth.
 
 #### Updating Attendance Points
 
-After merging / importing the latest results the series may contain some new competitors.
+After merging / importing the latest results / attendance codes the series may contain some new competitors.
 
-Ensure the new competitors are marked as ABS for any previous events which were scored on attendance.
+Ensure that all of the new competitors are marked as ABS for any previous events which were scored on attendance.
 
 #### Updating Average Points
 
-After adding the new race / event you may need to re-calculate the AVG points for some competitors. 
+After adding the new race / event you may need to re-calculate the AVG points for some of the existing competitors.
+
+Requests for average points are recorded in the event folders with a filename of international.txt
 
 #### Generating Fleet Rankings
 
+* Click "Rescore"
 * Select "Publish" -> "Results..."
 * Select the appropriate fleet and click "Provisional" before pressing "Next"
 * Select the "Default plus" style and destination of "A file on my computer/network"
 * Use the "Browse..." button to specify the HTML filename
 
-The HTML filenames should conform to project standards; e.g. slalom-rankings-am.html
+The HTML filenames should conform to the project standards; e.g. slalom-rankings-am.html
 
 #### Performing Sanity Checks
 
 The following checks need to be performed after you have updated the rankings:
 
-* Look for people who are duplicated due to their name being mis-spelt
+* Check that all of the events have a proper name and not R1, R2, etc.
+    * If an event needs naming then use Edit -> Edit race...
+* Look for people who are duplicated due to their name being misspelt
     * If duplicates are spotted then transfer the results to the correct competitor and delete the duplicate
 * Check the series discards are correct
     * If the series discards are incorrect then specify them in Setup -> Scoring system... -> Series Scoring -> Discard profile
-* Check that all of the events have a proper name and not R1, R2, etc.
-    * If an event needs naming then use Edit -> Edit race...
 * Check that ATT / ABS codes are not being discarded
     * If ATT / ABS codes are being discarded then use Edit -> Edit race... to make it non-discardable
 * Check that AVG points are calculated correctly
     * If AVG points are incorrect then fix them by double-clicking the incorrect cell
 
+If you make any corrections you will need to "Rescore" and "Publish" the rankings for the changes to be applied.
+
 ### Publishing Rankings
 
 #### Combining Fleet Rankings
 
-Combine the fleets into a single HTML file using your favorite text editor - e.g. slalom-rankings.html
+Combine the fleets into a single HTML file using your favourite text editor.
+
+The filename should conform to the project standards - e.g. slalom-rankings.html
 
 Tips:
 
 * Each fleet has a "summarytitle" which names the fleet
-* Each fleet has a "summarycaption" which shows the number of races sailed, discards, counting, etc.
+* Each fleet has a "summarycaption" which shows the number of races sailed, discards, etc.
 * Each fleet has a "summarytable" which is the actual results
 
 #### Performing Sanity Checks
 
-Check that the combined HTML file looks correct in your favorite browser.
+Check that the combined HTML file looks correct in your favourite browser.
 
 #### Uploading to the Server
 
 Results are uploaded to the UKWA server via [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol) - [FileZilla](https://filezilla-project.org/) is a good FTP client.
 
-Place the results in www_results/year - e.g. www_results/2017
+Place the results in the appropriate folder - e.g. www\_results/2017
 
 #### Publishing on the Website
 
-No publishing is required for the rankings as with individual events results.
+No publishing activity is required for the rankings to be made available.
 
 The UKWA website will automatically show the rankings if the HTML file is named correctly.
+
+Note: The UKWA webmaster must update the results template at the start of each season.
 
