@@ -488,7 +488,7 @@
 "column","1|Boat|9|No|No|40||","",""
 "column","1|Class|10|No|No|40||","",""
 "column","1|SailNo|11|Yes|Yes|49||","",""
-"column","1|AltSailNo|12|Yes|No|40||","",""
+"column","1|AltSailNo|12|Yes|Yes|40||","",""
 "column","1|Club|13|No|No|40||","",""
 "column","1|Seeding|14|No|No|40||","",""
 "column","1|HelmName|15|Yes|Yes|71||","",""
