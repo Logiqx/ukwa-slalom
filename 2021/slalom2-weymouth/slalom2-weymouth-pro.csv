@@ -1,17 +1,17 @@
-Tally,Fleet,Division,SailNo,AltSailNo,HelmName,HelmAgeGroup,HelmSex,Code
-27,Pro,,544,,Peter Whitmore,M,M,ATT
-28,Pro,,98AUS,,Mark Palmer,GM,M,ATT
-29,Pro,,248,,Alice Read,-,F,ATT
-30,Pro,,359,,Josh Lane,Y,M,ATT
-31,Pro,,168,,Lewis Limm,Y,M,ATT
-32,Pro,,426,,James Faley,Y,M,ATT
-33,Pro,,68,,Scotty Stallman,Y,M,ATT
-34,Pro,,71,,Sarah Jackson,-,F,ATT
-35,Pro,,630,,Shaun Cook,-,M,ATT
-36,Pro,,14,,Scott Harrison,M,M,ATT
-37,Pro,,82,83,Kevin Greenslade,M,M,ATT
-38,Pro,,659,,James Dinsmore,M,M,ATT
-39,Pro,,67,,Simon Pettifer,M,M,ATT
-40,Pro,,888,,Michael George,M,M,ATT
-41,Pro,,427,,Leigh Kingaby,-,M,ATT
-42,Pro,,945,,Nick Welsh,-,M,ATT
+Tally,Fleet,Division,SailNo,AltSailNo,HelmName,HelmAgeGroup,HelmSex,RaceNo,Code
+27,Pro,,544,,Peter Whitmore,M,M,2,ATT
+28,Pro,,98AUS,,Mark Palmer,GM,M,2,ATT
+29,Pro,,248,,Alice Read,-,F,2,ATT
+30,Pro,,359,,Josh Lane,Y,M,2,ATT
+31,Pro,,168,,Lewis Limm,Y,M,2,ATT
+32,Pro,,426,,James Faley,Y,M,2,ATT
+33,Pro,,68,,Scotty Stallman,Y,M,2,ATT
+34,Pro,,71,,Sarah Jackson,-,F,2,ATT
+35,Pro,,630,,Shaun Cook,-,M,2,ATT
+36,Pro,,14,,Scott Harrison,M,M,2,ATT
+37,Pro,,82,83,Kevin Greenslade,M,M,2,ATT
+38,Pro,,659,,James Dinsmore,M,M,2,ATT
+39,Pro,,67,,Simon Pettifer,M,M,2,ATT
+40,Pro,,888,,Michael George,M,M,2,ATT
+41,Pro,,427,,Leigh Kingaby,-,M,2,ATT
+42,Pro,,945,,Nick Welsh,-,M,2,ATT

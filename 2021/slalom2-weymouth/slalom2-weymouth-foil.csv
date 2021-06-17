@@ -1,3 +1,3 @@
-Tally,Fleet,Division,SailNo,AltSailNo,HelmName,HelmAgeGroup,HelmSex,Code
-23,Foil,IQF,775,,David Curry,M,M,ATT
-24,Foil,FF,40,,Tim Gibson,M,M,ATT
+Tally,Fleet,Division,SailNo,AltSailNo,HelmName,HelmAgeGroup,HelmSex,RaceNo,Code
+23,Foil,IQF,775,,David Curry,M,M,2,ATT
+24,Foil,FF,40,,Tim Gibson,M,M,2,ATT
