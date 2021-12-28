@@ -17,8 +17,8 @@ RUN jupyter nbconvert --to python python/*.ipynb && \
 # Ensure project file permissions are correct
 RUN chmod 755 python/*.py
 
-# Create final image from Python 3 (Alpine Linux)
-FROM python:${PYTHON_VERSION}-alpine${ALPINE_VERSION}
+# Create final image from Python 3 + lxml (Alpine Linux)
+FROM logiqx/python-lxml:${PYTHON_VERSION}-alpine${ALPINE_VERSION}
 
 # Note: Jovian is a fictional native inhabitant of the planet Jupiter
 ARG PY_USER=jovyan
@@ -37,8 +37,7 @@ RUN apk add --no-cache tini=~0.19
 
 # Install Python libraries
 RUN pip install --no-cache-dir \
-    beautifulsoup4==4.10.* \
-    lxml==4.7.*
+    beautifulsoup4==4.10.*
 
 # Copy project files from the builder
 USER ${PY_USER}
